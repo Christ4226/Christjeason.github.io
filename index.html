@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christ jeason | Infographiste Webdesigner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+        
+        .project-card:hover .project-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .skill-bar {
+            transition: width 1.5s ease-in-out;
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <!-- Navigation -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <div class="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold mr-3"><img src="Images/CJD LOGO TRANSPARENT SANS FONT.png" alt=""></div>
+                <span class="text-xl font-bold">Christ <span class="gradient-text">jeason</span> design</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#accueil" class="font-medium hover:text-indigo-600 transition">Accueil</a>
+                <a href="#services" class="font-medium hover:text-indigo-600 transition">Services</a>
+                <a href="#portfolio" class="font-medium hover:text-indigo-600 transition">Portfolio</a>
+                <a href="#competences" class="font-medium hover:text-indigo-600 transition">Compétences</a>
+                <a href="#contact" class="font-medium hover:text-indigo-600 transition">Contact</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="hidden md:block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-6 py-2 rounded-full transition shadow-lg">Discutons</a>
+                <button id="mobile-menu-button" class="md:hidden text-slate-800">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#accueil" class="font-medium hover:text-indigo-600 transition">Accueil</a>
+                <a href="#services" class="font-medium hover:text-indigo-600 transition">Services</a>
+                <a href="#portfolio" class="font-medium hover:text-indigo-600 transition">Portfolio</a>
+                <a href="#competences" class="font-medium hover:text-indigo-600 transition">Compétences</a>
+                <a href="#contact" class="font-medium hover:text-indigo-600 transition">Contact</a>
+                <a href="#contact" class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-6 py-2 rounded-full text-center transition">Discutons</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-bg min-h-screen flex items-center pt-20 text-white">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-16 lg:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Je suis <span class="gradient-text">Christ jeason</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-medium mb-6 text-slate-300">Infographiste & Webdesigner Créatif</h2>
+                    <p class="text-lg mb-8 text-slate-300 max-w-lg">Je transforme vos idées en designs visuellement époustouflants et expériences utilisateur intuitives. Mon approche allie créativité et stratégie pour des résultats qui captivent et convertissent.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#portfolio" class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-3 rounded-full text-center transition shadow-lg">Voir mon travail</a>
+                        <a href="#contact" class="border-2 border-white hover:bg-white/10 text-white px-8 py-3 rounded-full text-center transition">Contactez-moi</a>
+                    </div>
+                    
+                    <div class="mt-12 flex space-x-6">
+                        <a href="https://www.facebook.com/share/1CCVexTg2m/" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://wa.me/242069535036" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https:bit.ly/4kZeLzV" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/Christ_grace_banzouzi_officiel/" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://bit.ly/43WvjSP" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center overflow-hidden shadow-2xl floating">
+                            <img src="Images/NUTJE0404.JPG" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-5 -left-5 w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                            <div class="text-slate-900 font-bold text-center px-2">
+                                <span class="block text-2xl">3+</span>
+                                <span class="text-xs">Ans d'expérience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-indigo-600 font-medium">CE QUE JE FAIS</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Mes <span class="gradient-text">Services</span></h2>
+                <p class="max-w-2xl mx-auto text-slate-500">Je propose une gamme complète de services de design pour répondre à tous vos besoins créatifs et numériques.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-slate-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition animate-on-scroll">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 mb-6">
+                        <i class="fas fa-paint-brush text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Design Graphique</h3>
+                    <p class="text-slate-500">Création d'identités visuelles impactantes et de supports de communication sur mesure pour valoriser votre image de marque.</p>
+                    <div class="mt-6 flex items-center text-indigo-600 font-medium">
+                        <a href="#"><span>En savoir plus</span></a>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-slate-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition animate-on-scroll">
+                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+                        <i class="fas fa-laptop-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Webdesign</h3>
+                    <p class="text-slate-500">Conception de sites web modernes, responsives et intuitifs, pensés pour maximiser l'expérience utilisateur et booster les taux de conversion.</p>
+                    <div class="mt-6 flex items-center text-blue-600 font-medium">
+                        <a href="#"><span>En savoir plus</span></a>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-slate-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition animate-on-scroll">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 mb-6">
+                        <i class="fas fa-mobile-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
+                    <p class="text-slate-500">Interfaces utilisateur intuitives et expériences digitales fluides, conçues pour engager et fidéliser votre audience.</p>
+                    <div class="mt-6 flex items-center text-purple-600 font-medium">
+                        <a href="#"><span>En savoir plus</span></a>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-slate-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition animate-on-scroll">
+                    <div class="w-14 h-14 bg-amber-100 rounded-lg flex items-center justify-center text-amber-600 mb-6">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Branding</h3>
+                    <p class="text-slate-500">Stratégie de marque complète incluant positionnement, identité visuelle et guidelines pour une cohérence parfaite.</p>
+                    <div class="mt-6 flex items-center text-amber-600 font-medium">
+                        <a href="#"><span>En savoir plus</span></a>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-slate-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition animate-on-scroll">
+                    <div class="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600 mb-6">
+                        <i class="fas fa-photo-video text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Motion Design</h3>
+                    <p class="text-slate-500">Animations et vidéos captivantes pour vos campagnes digitales, présentations et réseaux sociaux.</p>
+                    <div class="mt-6 flex items-center text-emerald-600 font-medium">
+                        <a href="#"><span>En savoir plus</span></a>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-slate-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition animate-on-scroll">
+                    <div class="w-14 h-14 bg-pink-100 rounded-lg flex items-center justify-center text-pink-600 mb-6">
+                        <i class="fas fa-pencil-ruler text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Design sur mesure</h3>
+                    <p class="text-slate-500">Solutions créatives personnalisées adaptées à vos besoins spécifiques et objectifs business.</p>
+                    <div class="mt-6 flex items-center text-pink-600 font-medium">
+                        <a href="#"><span>En savoir plus</span></a>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-indigo-600 font-medium">MON TRAVAIL</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Mes <span class="gradient-text">Réalisations</span></h2>
+                <p class="max-w-2xl mx-auto text-slate-500">Découvrez une sélection de mes projets récents, alliant esthétique et performance.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="relative rounded-xl overflow-hidden shadow-lg group animate-on-scroll">
+                    <img src="Images/Affiche Alexandry.png" alt="Projet 1" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105">
+                    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 flex flex-col justify-end p-6 transition duration-300 transform translate-y-10">
+                        <span class="text-sm text-indigo-300">Branding</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Identité visuelle NovaTech</h3>
+                        <p class="text-slate-200 mb-4">Création d'une identité de marque moderne pour une startup tech.</p>
+                        <a href="#" class="text-white font-medium flex items-center">
+                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="relative rounded-xl overflow-hidden shadow-lg group animate-on-scroll">
+                    <img src="Images/PRESSIN Affiche le P.png" alt="Projet 2" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105">
+                    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 flex flex-col justify-end p-6 transition duration-300 transform translate-y-10">
+                        <span class="text-sm text-blue-300">Webdesign</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Site e-commerce LuxeMode</h3>
+                        <p class="text-slate-200 mb-4">Design d'une boutique en ligne haut de gamme pour une marque de prêt-à-porter.</p>
+                        <a href="#" class="text-white font-medium flex items-center">
+                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="relative rounded-xl overflow-hidden shadow-lg group animate-on-scroll">
+                    <img src="Images/Purple Modern Gradient Graphic Designer Services Facebook Post_20250404_160016_0000.png" alt="Projet 3" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105">
+                    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 flex flex-col justify-end p-6 transition duration-300 transform translate-y-10">
+                        <span class="text-sm text-purple-300">UI/UX Design</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Application FitTrack</h3>
+                        <p class="text-slate-200 mb-4">Conception d'une interface utilisateur pour une app de fitness mobile.</p>
+                        <a href="#" class="text-white font-medium flex items-center">
+                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="relative rounded-xl overflow-hidden shadow-lg group animate-on-scroll">
+                    <img src="Images/Pull party night-affiche  A.png" alt="Projet 4" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105">
+                    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 flex flex-col justify-end p-6 transition duration-300 transform translate-y-10">
+                        <span class="text-sm text-amber-300">Packaging</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Gamme de produits BioHarmony</h3>
+                        <p class="text-slate-200 mb-4">Design de packaging écologique pour une ligne de produits bio.</p>
+                        <a href="#" class="text-white font-medium flex items-center">
+                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="relative rounded-xl overflow-hidden shadow-lg group animate-on-scroll">
+                    <img src="Images/LA MEC PASTEUR  Dédicace.png" alt="Projet 5" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105">
+                    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 flex flex-col justify-end p-6 transition duration-300 transform translate-y-10">
+                        <span class="text-sm text-emerald-300">Motion Design</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Animation corporate FinX</h3>
+                        <p class="text-slate-200 mb-4">Vidéo explicative animée pour une entreprise de services financiers.</p>
+                        <a href="#" class="text-white font-medium flex items-center">
+                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="relative rounded-xl overflow-hidden shadow-lg group animate-on-scroll">
+                    <img src="Images/affiche noel web.png" alt="Projet 6" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105">
+                    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 flex flex-col justify-end p-6 transition duration-300 transform translate-y-10">
+                        <span class="text-sm text-pink-300">Illustration</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Série d'illustrations "Urban Life"</h3>
+                        <p class="text-slate-200 mb-4">Collection d'illustrations vectorielles sur le thème de la vie urbaine.</p>
+                        <a href="#" class="text-white font-medium flex items-center">
+                            Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 animate-on-scroll">
+                <a href="#" class="inline-flex items-center bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-3 rounded-full transition shadow-lg">
+                    <i class="fas fa-briefcase mr-2"></i> Voir plus de projets
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="competences" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12 animate-on-scroll">
+                    <span class="text-indigo-600 font-medium">MES COMPÉTENCES</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Expertise <span class="gradient-text">Technique</span></h2>
+                    <p class="text-slate-500 mb-8">Avec plus de 3 ans d'expérience dans le design digital, j'ai développé une maîtrise approfondie des principaux outils et technologies du secteur.</p>
+                    
+                    <div class="space-y-6">
+                        <!-- Skill 1 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Adobe Photoshop</span>
+                                <span class="text-slate-500">95%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="skill-bar bg-indigo-600 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill 2 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Adobe Illustrator</span>
+                                <span class="text-slate-500">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="skill-bar bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill 3 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Adobe Premiere pro</span>
+                                <span class="text-slate-500">85%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="skill-bar bg-purple-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill 4 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Adobe InDesign</span>
+                                <span class="text-slate-500">80%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="skill-bar bg-pink-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill 5 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">After Effects</span>
+                                <span class="text-slate-500">75%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="skill-bar bg-amber-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 animate-on-scroll">
+                    <div class="bg-slate-50 rounded-xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Processus de <span class="gradient-text">Travail</span></h3>
+                        
+                        <div class="space-y-8">
+                            <!-- Step 1 -->
+                            <div class="flex">
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 font-bold">1</div>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Brief & Recherche</h4>
+                                    <p class="text-slate-500">Analyse de vos besoins, étude de la concurrence et définition des objectifs.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 2 -->
+                            <div class="flex">
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold">2</div>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Conception</h4>
+                                    <p class="text-slate-500">Création de wireframes, moodboards et premières maquettes.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 3 -->
+                            <div class="flex">
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold">3</div>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Développement</h4>
+                                    <p class="text-slate-500">Production des designs finaux et préparation des assets.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 4 -->
+                            <div class="flex">
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold">4</div>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Livraison</h4>
+                                    <p class="text-slate-500">Revue finale, ajustements et remise des fichiers sources.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-blue-200 font-medium">TÉMOIGNAGES</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Ce qu'ils disent <span class="text-white">de moi</span></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white/10 p-8 rounded-xl backdrop-blur-sm animate-on-scroll">
+                    <div class="flex items-center mb-6">
+                        <img src="Images/Christie.jpg" alt="Client" class="w-14 h-14 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Christie Bantsimba</h4>
+                            <p class="text-blue-200 text-sm">Etudiante Chercheure</p>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"Christ jeason a transformé notre identité visuelle avec un professionnalisme remarquable. Son travail a considérablement renforcé notre image de marque."</p>
+                    <div class="flex text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white/10 p-8 rounded-xl backdrop-blur-sm animate-on-scroll">
+                    <div class="flex items-center mb-6">
+                        <img src="Images/Nono.jpg" alt="Client" class="w-14 h-14 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Noellie Dianzinga</h4>
+                            <p class="text-blue-200 text-sm">Infulencieuse,Creatrice de contenu</p>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"L'expérience utilisateur est fluide et les conversions ont augmenté de 40%. Grace a Christ jeason mes Abonné,mes vues et like augmente a une vitesse incroyable"</p>
+                    <div class="flex text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white/10 p-8 rounded-xl backdrop-blur-sm animate-on-scroll">
+                    <div class="flex items-center mb-6">
+                        <img src="Images/tttt.png" alt="Client" class="w-14 h-14 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Sacré bénis</h4>
+                            <p class="text-blue-200 text-sm">PDG Créapro</p>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"L'interface conçue pour notre application est à la fois esthétique et fonctionnelle. Christ jeason a parfaitement compris nos besoins utilisateurs."</p>
+                    <div class="flex text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12 animate-on-scroll">
+                    <span class="text-indigo-600 font-medium">ENTRONS EN CONTACT</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Travaillons <span class="gradient-text">ensemble</span></h2>
+                    <p class="text-slate-500 mb-8">Vous avez un projet en tête ou souhaitez discuter de vos besoins en design ? Je serais ravi d'échanger avec vous.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email</h4>
+                                <p class="text-slate-500">christjeasondesign@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Téléphone</h4>
+                                <p class="text-slate-500">+242 06 953 50 36</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Bureau</h4>
+                                <p class="text-slate-500">1O Rue Bernard Bikakoudi, CG Brazzaville</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-10 mb-4">Réseaux sociaux</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-slate-100 hover:bg-indigo-600 hover:text-white rounded-full flex items-center justify-center transition text-slate-800">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-100 hover:bg-pink-600 hover:text-white rounded-full flex items-center justify-center transition text-slate-800">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-100 hover:bg-blue-700 hover:text-white rounded-full flex items-center justify-center transition text-slate-800">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-100 hover:bg-purple-600 hover:text-white rounded-full flex items-center justify-center transition text-slate-800">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-100 hover:bg-purple-600 hover:text-white rounded-full flex items-center justify-center transition text-slate-800">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 animate-on-scroll">
+                    <div class="bg-slate-50 rounded-xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Envoyez-moi un <span class="gradient-text">message</span></h3>
+                        
+                        <form class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="name" class="block text-gray-700 mb-2">Nom</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 bg-white">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 bg-white">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-gray-700 mb-2">Sujet</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 bg-white">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 bg-white"></textarea>
+                            </div>
+                            
+                            <a href="https://wa.me/242069535036"target="_blank">
+                                <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-6 py-3 rounded-full transition shadow-lg mt-4">
+                                Envoyer le message
+                            </button>
+                        </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold mr-3">CJD</div>
+                        <span class="text-xl font-bold">Christ <span class="gradient-text">jeason</span></span>
+                    </a>
+                    <p class="text-slate-400">Infographiste & Webdesigner créatif transformant vos idées en designs mémorables.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-slate-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="#services" class="text-slate-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#portfolio" class="text-slate-400 hover:text-white transition">Portfolio</a></li>
+                        <li><a href="#competences" class="text-slate-400 hover:text-white transition">Compétences</a></li>
+                        <li><a href="#contact" class="text-slate-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>Design Graphique</li>
+                        <li>Webdesign</li>
+                        <li>UI/UX Design</li>
+                        <li>Branding</li>
+                        <li>Motion Design</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Newsletter</h4>
+                    <p class="text-slate-400 mb-4">Abonnez-vous pour recevoir mes dernières créations et conseils design.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Votre email" class="px-4 py-3 rounded-l-lg focus:outline-none text-slate-900 w-full">
+                        <button class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 px-4 py-3 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-400 mb-4 md:mb-0">© 2025 christjeasondesign. <br> Donnez vie a vos imaginations.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-white transition">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                
+                <a href="#" class="text-slate-400 hover:text-white transition">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                
+                <a href="https://wa.me/242069535036" target="_blank" class="text-slate-400 hover:text-white transition">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <br>
+    <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animation on scroll
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        animateElements.forEach(element => {
+            observer.observe(element);
+        });
+        
+        // Animate skill bars on scroll
+        const skillBars = document.querySelectorAll('.skill-bar');
+        
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const width = entry.target.style.width;
+                    entry.target.style.width = '0';
+                    setTimeout(() => {
+                        entry.target.style.width = width;
+                    }, 100);
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+        
+        skillBars.forEach(bar => {
+            skillObserver.observe(bar);
+        });
+    </script>
+</body>
+</html>
